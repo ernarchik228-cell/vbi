@@ -118,6 +118,29 @@ ipython_config.py
 .pdm-build/
 
 # pixi
+
+# Секреты Streamlit (API ключи Shodan, VT, SerpAPI)
+.streamlit/secrets.toml
+
+# Python файлы
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Виртуальное окружение
+venv/
+env/
+.env
+
+# Базы данных (если сохраняешь локально)
+*.db
+*.sqlite3
+
+# Логи и временные файлы
+*.log
+.DS_Store (для macOS)
+.vscode/
+.idea/
 #   Similar to Pipfile.lock, it is generally recommended to include pixi.lock in version control.
 #pixi.lock
 #   Pixi creates a virtual environment in the .pixi directory, just like venv module creates one
