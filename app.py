@@ -142,6 +142,10 @@ if scan:
 
     # --- РЕЖИМ 1: ИНФРАСТРУКТУРА (IP) ---
     if scan_type == "IP Infrastructure":
+       if not SHODAN_API_KEY or not VT_API_KEY:
+            st.error("🚨 Missing SHODAN or VirusTotal API key")
+            st.stop()
+
         with st.spinner("🔍 Querying Shodan & VirusTotal..."):
             sh_data = scan_ip_shodan(query, SHODAN_API_KEY)
             vt_data = scan_ip_vt(query, VT_API_KEY)
